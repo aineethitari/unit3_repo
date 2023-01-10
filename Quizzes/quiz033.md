@@ -1,6 +1,7 @@
 # Quiz 33
 ## Code
 
+```.py
 def list_pairing(list1:list,list2:list)->list:
     output = []
     for i in range(len(list1)):
@@ -9,7 +10,7 @@ def list_pairing(list1:list,list2:list)->list:
                output.append(list1[i])
 
     return output
-
+```
 
 ## Test Result
 
