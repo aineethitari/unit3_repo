@@ -51,3 +51,5 @@ Screen:
             size_hint: 1,1
             font_size: '34pt'
 ```
+## Result<img width="795" alt="quiz39 result" src="https://user-images.githubusercontent.com/112055062/215039919-340f9c6d-d7b8-48f8-a258-46b519313cd9.png">
+
