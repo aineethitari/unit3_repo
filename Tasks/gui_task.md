@@ -152,7 +152,7 @@ class CurrencyConverter(MDApp):
         self.final = 0
 
     def build(self):
-        pass 
+        pass # You should add the code to build the user interface here.
 
     def convert(self, currency:str):
         if self.root.ids.amount_thai.text.isdigit():
@@ -162,6 +162,9 @@ class CurrencyConverter(MDApp):
                 self.final = float(int(self.root.ids.amount_thai.text)) * 32.78
 
             self.root.ids.converted_value.text = f"The converted value is {self.final:.2f} {currency}"
+        else:
+            self.root.ids.amount_thai.text = f"ERROR. Please enter numbers"
+
 
 CurrencyConverter().run()
 ```
