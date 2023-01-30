@@ -140,3 +140,79 @@ Screen:
 <img width="790" alt="example 3 run" src="https://user-images.githubusercontent.com/112055062/215324115-4c7b5fe7-4060-4da6-9a31-0043b4e6a6ce.png">
 
 ## Task 1
+### Python
+
+```.py
+from kivymd.app import MDApp
+
+class CurrencyConverter(MDApp):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.thai = 0
+        self.final = 0
+
+    def build(self):
+        pass # You should add the code to build the user interface here.
+
+    def convert(self, currency:str):
+        if self.root.ids.amount_thai.text.isdigit():
+            if currency == "JPY":
+                self.final = float(int(self.root.ids.amount_thai.text)) * 0.25
+            if currency == "USD":
+                self.final = float(int(self.root.ids.amount_thai.text)) * 32.78
+
+            self.root.ids.converted_value.text = f"The converted value is {self.final:.2f} {currency}"
+
+CurrencyConverter().run()
+```
+
+### Kivy
+```.kv
+Screen:
+    size: 500, 500
+    MDLabel:
+        id: title
+        text: "Currency Converter"
+        font_style: "H1"
+        pos_hint: {"center_y":.8}
+        halign: "center"
+        font_size: "38pt"
+
+    MDTextField:
+        id: amount_thai
+        hint_text: "Enter amount in THB"
+        mode: "fill"
+        size_hint: .80,.15
+        pos_hint: {"center_y":.5,"center_x":.5}
+        halign: "center"
+
+    MDBoxLayout:
+        id: button
+        orientation: "horizontal"
+        size_hint: .4,.3
+        pos_hint:  {"center_y":.2,"center_x":.5}
+
+        MDChip:
+            text: "JPY"
+            pos_hint: {"center_y":.5, "center_x":.5}
+            md_bg_color: "#D62828"
+            on_press: app.convert("JPY")
+
+        MDChip:
+            text: "USD"
+            pos_hint: {"center_y":.5, "center_x":.5}
+            md_bg_color: "#F77F00"
+            on_press: app.convert("USD")
+
+    MDLabel:
+        id: converted_value
+        text: ""
+        font_style: "H1"
+        font_size: "34pt"
+        pos_hint: {"center_y":.33}
+        halign: "center"
+```
+
+<img width="795" alt="currencyconverter run" src="https://user-images.githubusercontent.com/112055062/215503962-d1159aa8-06a1-41c3-a503-7727b6e606b6.png">
+
+## Task 2
