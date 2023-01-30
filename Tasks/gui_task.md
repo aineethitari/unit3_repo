@@ -217,6 +217,7 @@ Screen:
 ```
 ### Result
 <img width="795" alt="currencyconverter run" src="https://user-images.githubusercontent.com/112055062/215503962-d1159aa8-06a1-41c3-a503-7727b6e606b6.png">
+
 ### Validate input
 <img width="798" alt="currency converter validat" src="https://user-images.githubusercontent.com/112055062/215511647-49d92d9b-637d-4d6f-b8fd-2549265ed658.png">
 
