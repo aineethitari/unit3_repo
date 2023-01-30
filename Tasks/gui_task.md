@@ -152,7 +152,7 @@ class CurrencyConverter(MDApp):
         self.final = 0
 
     def build(self):
-        pass # You should add the code to build the user interface here.
+        pass 
 
     def convert(self, currency:str):
         if self.root.ids.amount_thai.text.isdigit():
