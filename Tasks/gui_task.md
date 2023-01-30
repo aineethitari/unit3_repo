@@ -221,3 +221,81 @@ Screen:
 <img width="798" alt="currency converter validat" src="https://user-images.githubusercontent.com/112055062/215511647-49d92d9b-637d-4d6f-b8fd-2549265ed658.png">
 
 ## Task 2
+### Python
+```.py
+from kivymd.app import MDApp
+
+class bitconverter(MDApp):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.before = 0
+        self.after = 0
+
+    def build(self):
+        pass
+
+    def convert(self, type:str):
+        if self.root.ids.original.text.isdigit():
+            if type == "Bytes":
+                self.after = int(self.root.ids.original.text) * 8
+            if type == "Bits":
+                self.after = int(self.root.ids.original.text) / 8
+            self.root.ids.final.text = f"The value is {self.after} {type}"
+        else:
+            self.root.ids.original.text = "ERROR. Please enter a number"
+
+bitconverter().run()
+```
+### Kivy
+```.kv
+Screen:
+    size: 500, 500
+    MDLabel:
+        id: title
+        text: "Bits / Bytes Converter"
+        font_style: "H1"
+        pos_hint: {"center_y":.8}
+        halign: "center"
+        font_size: "38pt"
+
+    MDTextField:
+        id: original
+        hint_text: "Enter amount in Bits or Bytes"
+        mode: "round"
+        size_hint: .80,.15
+        pos_hint: {"center_y":.6,"center_x":.5}
+        halign: "center"
+
+    MDBoxLayout:
+        id: button
+        orientation: "horizontal"
+        size_hint: .6,.4
+        pos_hint:  {"center_y":.2,"center_x":.5}
+
+        MDChip:
+            text: "Convert from Bytes to Bits"
+            pos_hint: {"center_y":.5, "center_x":.5}
+            md_bg_color:"#d170d0"
+            on_press: app.convert("Bytes")
+
+        MDChip:
+            text: "Convert from Bits to Bytes"
+            pos_hint: {"center_y":.5, "center_x":.5}
+            md_bg_color:"#e86e4d"
+            on_press: app.convert("Bits")
+    MDLabel:
+        id: final
+        text: ""
+        font_style: "H1"
+        font_size: "34pt"
+        pos_hint: {"center_y":.33}
+        halign: "center"
+```
+
+### Result
+
+<img width="796" alt="task2 result" src="https://user-images.githubusercontent.com/112055062/215521197-2a18409c-0367-48b7-b64a-2ed2137fdfc4.png">
+
+### Validate Input
+
+<img width="797" alt="task 2 error" src="https://user-images.githubusercontent.com/112055062/215521392-7c62a076-8ab1-446a-a60b-35b18f95998a.png">
