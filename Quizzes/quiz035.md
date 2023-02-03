@@ -10,10 +10,10 @@ class Account:
         self.balance = 0
         self.holder_name = ""
         self.holder_email = ""
-        a = random.randint(100,1000)
-        b = random.randint(10000,100000)
-        c = random.randint(0,10)
-        self.number = [a,b,c]
+        a = random.randint(100,999)
+        b = random.randint(10000,99999)
+        c = random.randint(0,9)
+        self.number = [f"{a}--{b}--{c}"]
     def set_holder_name(self, name:str)->str:
         if not isinstance(name,str):
             raise ValueError("Error. The Name has to be a string")
@@ -30,9 +30,8 @@ class Account:
     def deposit(self,amount:int)->str:
         self.balance += amount
         return f"New balance: {self.balance} USD"
-    def get_account_no(self)->str:
-        a, b, c = self.number
-        return f"Holder's account number is {a}--{b}--{c}"
+    def get_account_no(self):
+        return self.number[0]
 ```
 
 ## Test
