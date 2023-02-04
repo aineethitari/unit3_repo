@@ -51,5 +51,6 @@ class Classroom:
 
 ## UML Diagram
 
-<img width="648" alt="quiz36 uml diagram" src="https://user-images.githubusercontent.com/112055062/216681000-a65a061a-4aa1-40f0-afb6-8f0b813d1211.png">
+<img width="459" alt="UML quiz 36" src="https://user-images.githubusercontent.com/112055062/216754943-108c82a7-f486-4b8b-99fa-4f8f6f19b137.png">
+
 
