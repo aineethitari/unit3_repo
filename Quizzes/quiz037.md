@@ -42,6 +42,7 @@ class AccountingProgram:
 
 <img width="702" alt="quiz 37 test" src="https://user-images.githubusercontent.com/112055062/216754172-4996b962-0820-4398-8c96-cbe7a4d91876.png">
 
-#UML Diagram
+## UML Diagram
+
 <img width="448" alt="Quiz37 uml" src="https://user-images.githubusercontent.com/112055062/216755503-2b205491-6f85-4068-8832-d947b4bf1b08.png">
 
