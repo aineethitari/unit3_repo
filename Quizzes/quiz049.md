@@ -1,5 +1,6 @@
 # Quiz 49
 ## Code
+```.py
 import sqlite3
 from secure_password import check_password
 
@@ -37,6 +38,7 @@ for item in result:
         amount_valid += amount
 
 print(f"Total amount of bitcoins is {amount_valid}")
+```
 
 ## Result
 
