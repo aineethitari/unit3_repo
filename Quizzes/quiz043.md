@@ -1,4 +1,4 @@
-# Quiz 42
+# Quiz 43
 ## SQL Command
 
 ```.sql
