@@ -33,5 +33,21 @@ SELECT count(*) from ITEM where item like 'A%';
 
 ANS: 3 items
 
-8. How many different jobs are there? 
+5. How many different jobs are there? 
+```
+SELECT count(distinct job) from  INHABITANT;
+```
+![quiz44 q5](https://user-images.githubusercontent.com/112055062/225385953-efe43b16-3444-48c8-b3e9-a088dce7bb0a.png)
+ 
+ ANS: 15
+ 
 9. What are the items owned by the herbalists?
+
+```
+SELECT personid from INHABITANT where job is 'Herbalist';
+SELECT * from ITEM where owner is 4 or owner is 18;
+```
+
+![quiz 44 q 6 1](https://user-images.githubusercontent.com/112055062/225396708-0c0b34ba-ff41-4cd2-a52d-bd78add6fb62.png)
+
+![quiz 44 q 6 2](https://user-images.githubusercontent.com/112055062/225396784-9261049e-ce72-4a93-ae58-1cc8f5c6103d.png)
