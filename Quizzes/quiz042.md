@@ -95,6 +95,5 @@ ScreenManager:
 
 ## Result
 
-
-https://user-images.githubusercontent.com/112055062/225361593-c3f1813e-2a52-4211-9778-ff649f6611dc.mov
+video: https://youtu.be/h1SHVF3hjEM
 
