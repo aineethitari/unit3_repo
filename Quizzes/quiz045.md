@@ -1,6 +1,9 @@
 # Quiz 45
 ## Create the UML Diagram
 
+![UML diagram check fraud](https://user-images.githubusercontent.com/112055062/225951820-67d7abeb-b115-47a2-a574-ab5ec64a3f29.jpeg)
+
+
 ## Create the SQL queries to find the responsible for the fraudulent transaction.
 ```.sql
 SELECT account_id, sum(amount) as total_deposit FROM transactions where transaction_type = 'deposit' GROUP BY account_id; total deposit
@@ -19,4 +22,5 @@ FROM (SELECT sum(amount) as total_deposit, account_id as 'account_deposit' FROM 
 SELECT customer_id, first_name, last_name from customers WHERE customer_id in (12,13,15,17,19)
 ```
 <img width="533" alt="fraud customers" src="https://user-images.githubusercontent.com/112055062/225945212-f72d0230-2f7e-4b37-b90d-da67d8dea68e.png">
+The total balance does not match the deposited and withdraw amount.
 
